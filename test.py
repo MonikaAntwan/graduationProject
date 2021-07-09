@@ -1,7 +1,5 @@
 import requests
 
 BASE = "http://127.0.0.1:5000/"
-
-response = requests.delete(BASE + "deleteDestination/1/'Abu Simbel Temple'")
+response = requests.get(BASE + "/destinationList/1/1")
 print(response.json())
-print("Maii")
