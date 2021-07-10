@@ -106,7 +106,7 @@ api.add_resource(LogIn, "/login/<string:chosenEmail>/<string:chosenPassword>")
 class DestinationsList(Resource):
 	@marshal_with(resource_fields_destinations)
 	def get(self, chosenID,chosenPage):
-		results = Destinations.query.filter(Destinations.customerID==chosenID).paginate(chosenPage,3,False).items
+		results = Destinations.query.filter(Destinations.customerID==chosenID).paginate(chosenPage,7,False).items
 		return results
 
 api.add_resource(DestinationsList, "/destinationList/<int:chosenID>/<int:chosenPage>")
