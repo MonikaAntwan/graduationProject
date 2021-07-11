@@ -151,5 +151,4 @@ class DeleteDestination(Resource):
 api.add_resource(DeleteDestination, "/deleteDestination/<int:chosenId>/<string:chosenDestination>")
 
 if __name__ == "__main__":
-	#db.create_all()
 	app.run()
